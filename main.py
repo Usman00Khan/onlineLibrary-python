@@ -434,7 +434,7 @@ class SqlHelper:
         self.cursor.execute("create table if not exists adminactivity (time datetime,admin varchar(10),uploaded varchar(100),subject varchar(20),primary key (time,admin))")
         self.db.commit()
     def __connect(self):
-        db = pymysql.connect("localhost","root","usman158","online_library")
+        db = pymysql.connect("localhost","Username","Password","online_library")
         return db
     def retuserdetails(self,userid):
         self.cursor.execute("select userid,password from userdetails where userid = '%s';" %(userid))
